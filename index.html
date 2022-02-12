@@ -18,46 +18,53 @@
 		<p>This is the registration page.</p>
 	</div>
 	<hr><br>
-	<form action="/submission.html">
+	<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
 	<h1>Welcome to the ITMD-361 registration form!</h1>
 	<div class="box">
 	<h2>Enter your information here:</h2>
-		<p><strong>First Name:</strong> <input type="text" name="firstName" placeholder="first name here"> <?php echo htmlentities($firstName) ?></p>
-		<p><strong>Last Name:</strong> <input type="text" name="lastName" placeholder="last name here"> <?php echo htmlentities($lastName) ?></p>
-		<p><strong>Phone Number:</strong> <input type="text" name="phoneNumber" placeholder="phone number here"> <?php echo htmlentities($phone) ?></p>
-		<p><strong>Email Address:</strong> <input type="text" name="emailAddress" placeholder="email address here"> <?php echo htmlentities($email) ?></p>
-		<p><strong>Gender:</strong> <input type="radio" id="gender1" name="gender"> <label for="gender1">Female</label> <input type="radio" id="gender2" name="gender"> <label for="gender2">Male</label><?php echo htmlentities($gender) ?></p>
+		<p><strong>First Name:</strong> <input type="text" name="first_name_field" placeholder="first name here"></p>
+		<p><strong>Last Name:</strong> <input type="text" name="last_name_field" placeholder="last name here"></p>
+		<p><strong>Phone Number:</strong> <input type="text" name="phone_field" placeholder="phone number here"></p>
+		<p><strong>Email Address:</strong> <input type="text" name="email_field" placeholder="email address here"></p>
+		<p><strong>Gender:</strong>
+			<input type="radio" id="gender1" name="gender_field" value="Female"> <label for="gender1">Female</label>
+			<input type="radio" id="gender2" name="gender_field" value="Male"> <label for="gender2">Male</label></p>
 		<p><strong>Age:</strong>
-			<input type="radio" id="age1" name="age"><label for="age1">12-18</label>
-			<input type="radio" id="age2" name="age"> <label for="age2">19-24</label>
-			<input type="radio" id="age3" name="age"> <label for="age3">25-34</label>
-			<input type="radio" id="age4" name="age"> <label for="age4">35-44</label>
-			<input type="radio" id="age5" name="age"> <label for="age5">45-54</label>
-			<input type="radio" id="age6" name="age"> <label for="age6">55-64</label>
-			<input type="radio" id="age7" name="age"> <label for="age7">65-74</label>
-			<input type="radio" id="age8" name="age"> <label for="age8">75-84</label>
-			<input type="radio" id="age9" name="age"> <label for="age9">85-99</label>
-			<input type="radio" id="age10" name="age"> <label for="age10">100+</label></p>
+			<select name="age" id="age">
+				<option value="12-18">12-18</option>
+  			<option value="19-24">19-24</option>
+	  		<option value="12-18">25-34</option>
+				<option value="12-18">35-44</option>
+				<option value="12-18">45-54</option>
+				<option value="12-18">55-64</option>
+				<option value="12-18">65-74</option>
+				<option value="12-18">75-84</option>
+				<option value="12-18">85-99</option>
+				<option value="12-18">100+</option>
+</select>
+</p>
 	</div>
 	<div class="box">
 	<h2>Enter your availability:</h2>
 	<h3>Days Selected as Available:</h3>
 </strong>
-			<input type="checkbox" id="dayOfTheWeek1" name="dayOfTheWeek"> <label for="dayOfTheWeek1">Sunday</label>
-			<input type="checkbox" id="dayOfTheWeek2" name="dayOfTheWeek"> <label for="dayOfTheWeek2">Monday</label>
-			<input type="checkbox" id="dayOfTheWeek3" name="dayOfTheWeek"> <label for="dayOfTheWeek3">Tuesday</label>
-			<input type="checkbox" id="dayOfTheWeek4" name="dayOfTheWeek"> <label for="dayOfTheWeek4">Wednesday</label>
-			<input type="checkbox" id="dayOfTheWeek5" name="dayOfTheWeek"> <label for="dayOfTheWeek5">Thursday</label>
-			<input type="checkbox" id="dayOfTheWeek6" name="dayOfTheWeek"> <label for="dayOfTheWeek6">Friday</label>
-			<input type="checkbox" id="dayOfTheWeek7" name="dayOfTheWeek"> <label for="dayOfTheWeek7">Saturday</label>
+			<input type="checkbox" id="dayOfTheWeek1" name="available_field[]" value="Sunday"> <label for="dayOfTheWeek1">Sunday</label>
+			<input type="checkbox" id="dayOfTheWeek2" name="available_field[]" value="Monday"> <label for="dayOfTheWeek2">Monday</label>
+			<input type="checkbox" id="dayOfTheWeek3" name="available_field[]" value="Tuesday"> <label for="dayOfTheWeek3">Tuesday</label>
+			<input type="checkbox" id="dayOfTheWeek4" name="available_field[]" value="Wednesday"> <label for="dayOfTheWeek4">Wednesday</label>
+			<input type="checkbox" id="dayOfTheWeek5" name="available_field[]" value="Thursday"> <label for="dayOfTheWeek5">Thursday</label>
+			<input type="checkbox" id="dayOfTheWeek6" name="available_field[]" value="Friday"> <label for="dayOfTheWeek6">Friday</label>
+			<input type="checkbox" id="dayOfTheWeek7" name="available_field[]" value="Saturday"> <label for="dayOfTheWeek7">Saturday</label>
 
 	<h3>Comments:</h3>
-	<p><?php echo nl2br(htmlentities($comments)) ?></p>
+	<h3>If you have any comments, express them below:</h3>
+<input type="textarea" name="comments_field">
 	</div>
 	<div class="box">
 	<h2>Click or tap "Submit" below:</h2>
 	<input type="submit" id="submit" name="Submit">
 	</div>
+<input type="hidden" name="hidden_field" value="cgluth">
 </form>
 </body>
 </html>
