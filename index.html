@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ITMD-361 Lab 3 Form Processing Script</title>
+		<style>
+		.box {
+			border: 1px solid #444;
+			background-color: #ccc;
+			margin: 20px 20px;
+			padding: 5px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div style="text-align:center;">
+		<h2>ITMD-361 Lab 3 Form Processing Script</h2>
+		<p>This is the registration page.</p>
+	</div>
+	<hr><br>
+	<form action="/submission.html">
+	<h1>Welcome to the ITMD-361 registration form!</h1>
+	<div class="box">
+	<h2>Enter your information here:</h2>
+		<p><strong>First Name:</strong> <input type="text" name="firstName" placeholder="first name here"> <?php echo htmlentities($firstName) ?></p>
+		<p><strong>Last Name:</strong> <input type="text" name="lastName" placeholder="last name here"> <?php echo htmlentities($lastName) ?></p>
+		<p><strong>Phone Number:</strong> <input type="text" name="phoneNumber" placeholder="phone number here"> <?php echo htmlentities($phone) ?></p>
+		<p><strong>Email Address:</strong> <input type="text" name="emailAddress" placeholder="email address here"> <?php echo htmlentities($email) ?></p>
+		<p><strong>Gender:</strong> <input type="radio" id="gender1" name="gender"> <label for="gender1">Female</label> <input type="radio" id="gender2" name="gender"> <label for="gender2">Male</label><?php echo htmlentities($gender) ?></p>
+		<p><strong>Age:</strong>
+			<input type="radio" id="age1" name="age"><label for="age1">12-18</label>
+			<input type="radio" id="age2" name="age"> <label for="age2">19-24</label>
+			<input type="radio" id="age3" name="age"> <label for="age3">25-34</label>
+			<input type="radio" id="age4" name="age"> <label for="age4">35-44</label>
+			<input type="radio" id="age5" name="age"> <label for="age5">45-54</label>
+			<input type="radio" id="age6" name="age"> <label for="age6">55-64</label>
+			<input type="radio" id="age7" name="age"> <label for="age7">65-74</label>
+			<input type="radio" id="age8" name="age"> <label for="age8">75-84</label>
+			<input type="radio" id="age9" name="age"> <label for="age9">85-99</label>
+			<input type="radio" id="age10" name="age"> <label for="age10">100+</label></p>
+	</div>
+	<div class="box">
+	<h2>Enter your availability:</h2>
+	<h3>Days Selected as Available:</h3>
+</strong>
+			<input type="checkbox" id="dayOfTheWeek1" name="dayOfTheWeek"> <label for="dayOfTheWeek1">Sunday</label>
+			<input type="checkbox" id="dayOfTheWeek2" name="dayOfTheWeek"> <label for="dayOfTheWeek2">Monday</label>
+			<input type="checkbox" id="dayOfTheWeek3" name="dayOfTheWeek"> <label for="dayOfTheWeek3">Tuesday</label>
+			<input type="checkbox" id="dayOfTheWeek4" name="dayOfTheWeek"> <label for="dayOfTheWeek4">Wednesday</label>
+			<input type="checkbox" id="dayOfTheWeek5" name="dayOfTheWeek"> <label for="dayOfTheWeek5">Thursday</label>
+			<input type="checkbox" id="dayOfTheWeek6" name="dayOfTheWeek"> <label for="dayOfTheWeek6">Friday</label>
+			<input type="checkbox" id="dayOfTheWeek7" name="dayOfTheWeek"> <label for="dayOfTheWeek7">Saturday</label>
+
+	<h3>Comments:</h3>
+	<p><?php echo nl2br(htmlentities($comments)) ?></p>
+	</div>
+	<div class="box">
+	<h2>Click or tap "Submit" below:</h2>
+	<input type="submit" id="submit" name="Submit">
+	</div>
+</form>
+</body>
+</html>
